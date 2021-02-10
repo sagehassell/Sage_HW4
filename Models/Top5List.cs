@@ -8,7 +8,7 @@ namespace Sage_HW4.Models
 {
     public class Top5List
     {
-        //Create constructor for Ranking so it is read only
+        //constructor for Ranking so it is read only
         public Top5List(int rank)
         {
             RestRanking = rank;
@@ -16,12 +16,10 @@ namespace Sage_HW4.Models
 
         // Create attributes
         [Required]
-        public int? RestRanking { get; set; } = 1;
-
+        public int? RestRanking { get; set; }
         [Required]
         public string RestName { get; set; }
         public string? FavDish { get; set; }
-        
         [Required]
         public string RestAddress { get; set; }
         public string? RestPhone { get; set; }
