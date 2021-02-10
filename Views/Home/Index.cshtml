@@ -1,0 +1,19 @@
+﻿@{
+    ViewBag.Title = "Top 5 Provo Restaurants";
+    ViewBag.SubHeading = "It's time to make your tastebuds happy";
+}
+
+@model IEnumerable<string>
+
+<div class="text-center">
+<img src="~/img/sitting.jpg" />
+
+<br /><br />
+<ul>
+    @foreach (string r in Model)
+    {
+        <li class="list-group-item list-group-item-light">@Html.Raw(r)</li>
+    }
+</ul>
+    <br /><br />
+</div>

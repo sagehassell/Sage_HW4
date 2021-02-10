@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewBag.Title</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+</head>
+<div class="ul">
+    <ul class=" ul-nav-new active">
+        <li><a asp-controller="Home" asp-action="Index">Home</a></li>
+        <li><a asp-controller="Home" asp-action="Suggestions">Suggest a Restaurant</a></li>
+        <li><a asp-controller="Home" asp-action="SuggestionsList">View Suggested Restaurants</a></li>
+    </ul>
+</div>
+
+<body class="text-center">
+    <div >
+        <br /><br />
+        <h1>@ViewBag.Title</h1>
+        <h4 >@ViewBag.SubHeading</h4>
+    </div>
+    <div>
+        @RenderBody()
+        <br /><br /><br />
+    </div>
+    
+</body>
+</html>

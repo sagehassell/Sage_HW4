@@ -1,0 +1,38 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Enter Your Own Suggestion Here";
+    ViewBag.SubHeading = "Just please don't add Bok Bok Chicken...";
+}
+
+@model Sage_HW4.Models.Suggestion
+
+<br /><br />
+
+      <form asp-action="Suggestions" method="post">
+          <label asp-for="Name">Name</label>
+          <br />
+          <input asp-for="Name" />
+          <br /><br />
+
+          <label asp-for="RestName">Rest. Name</label>
+          <br />
+          <input asp-for="RestName" />
+          <br /><br />
+
+          <label asp-for="FavDish">Favorite Dish</label>
+          <br />
+          <input asp-for="FavDish" />
+          <br /><br />
+
+          <label asp-for="RestPhone">Rest. Phone Number</label>
+          <br />
+          <input asp-for="RestPhone" />
+          <br /><br />
+          <button class="btn btn-primary " type="submit">Submit Suggestion</button>
+          <br /><br />
+          <div class="text-center li-error" asp-validation-summary="All"></div>
+
+
+      </form>

@@ -1,0 +1,36 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+    ViewBag.Title = "Peer Suggested Places to Eat";
+    ViewBag.SubHeading = "Here are all the Restaurants that have been suggested by people like you!";
+}
+
+@model IEnumerable<Sage_HW4.Models.Suggestion>
+    <center>
+        <br /><br />
+        <table id="rest-list">
+            <thead>
+                <tr>
+                    <th>Suggester</th>
+                    <th>Restaurant Name</th>
+                    <th>Favorite Dish</th>
+                    <th>Restaurant Phone</th>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Sage_HW4.Models.Suggestion x in Model)
+                {
+                    <tr>
+                        <td>@x.Name</td>
+                        <td>@x.RestName</td>
+                        <td>@x.FavDish</td>
+                        <td>@x.RestPhone</td>
+                    </tr>
+                }
+            </tbody>
+
+
+
+        </table>
+    </center>
